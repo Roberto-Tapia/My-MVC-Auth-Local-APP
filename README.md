@@ -37,8 +37,20 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 - Create a `.env` file and add the following as `key: value` 
   - PORT: 2121 (can be any port example: 3000) 
   - DB_STRING: `your database URI` 
- ---
- 
- Have fun testing and improving it! 😎
+
+
+# Things to Improve ---
+
+- CSS Styling
+- Display Date of each clock-in / clock-out
+- Render EJS Hours worked
+- Add real time clock to display what time it is (Option 2: timer showing how much time user has been clocked in? Updating every second. A little more work)
+- Deleting Code that is not being used (There is a lot)
+
+
+# Contributors
+
+- @exitSim_exe
+
 
 

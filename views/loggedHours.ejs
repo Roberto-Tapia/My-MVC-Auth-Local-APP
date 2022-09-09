@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Your Time Card</h1>
+
+    <ul>
+    <% hoursToDisplay.forEach( el => { %>
+            <li class='todoItem' data-id='<%=el._id%>'>
+                <span>In: <span ><%= el.timeIn %></span></span>
+                <span> Out: <%= el.timeOut %></span>
+                <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+
+    <h2><%= user.userName %> has worked a total of <%= left %> hours.</h2>
+
+
+    <form action="/loggedHours/createLoggedHours" method='POST'>
+        <span>Time-In<input type="time" placeholder="clock-in" name='setTimeIn'></span><br>
+        <span>Time-Out<input type="time" placeholder="clock-out" name='setTimeOut'></span><br>
+        <input type="date" placeholder="date" name='setDate'>
+        <input type="submit">
+    </form>
+
+    <a href="/logout">Logout</a>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
